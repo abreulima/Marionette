@@ -8,14 +8,14 @@ def run_strcmp_tests(lib):
     lib.ft_strcmp.restype = ctypes.c_int
 
     test_cases = [
-        ("hello", "hello", 0),  # Strings are identical, expected result is 0
-        ("apple", "banana", -1),  # "apple" < "banana", expected result is negative
-        ("cat", "bat", 1),  # "cat" > "bat", expected result is positive
-        ("123", "1234", -1),  # "123" < "1234", expected result is negative
-        ("abcd", "abc", 1),  # "abcd" > "abc", expected result is positive
-        ("", "", 0),  # Empty strings, expected result is 0
-        ("a", "", 1),  # "a" > "", expected result is positive
-        ("", "b", -1),  # "" < "b", expected result is negative
+        ("hello", "hello", 0),  # Strings are identical
+        ("apple", "banana", -1),  # "apple" < "banana"
+        ("cat", "bat", 1),  # "cat" > "bat"
+        ("123", "1234", -1),  # "123" < "1234"
+        ("abcd", "abc", 100),  # "abcd" > "abc"
+        ("", "", 0),  # Empty strings
+        ("a", "", 97),  # "a" > ""
+        ("", "b", -98),  # "" < "b"
     ]
 
     for s1, s2, expected in test_cases:

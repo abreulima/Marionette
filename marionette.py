@@ -66,9 +66,9 @@ for f in files:
             elif ex == "ft_strlcat.c":
                 run_strlcat_tests(lib)
 
-
         else:
             print("Failed to create file")
 
-        
+
+    os.remove(out)        
 

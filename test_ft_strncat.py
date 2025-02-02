@@ -8,7 +8,7 @@ def run_strncat_tests(lib):
         ("Hello", "", 3, "Hello"),  # Empty `src`, limit 3
         ("", "", 3, ""),  # Both empty, limit 3
         ("abc", "def", 4, "abcdef"),  # Limit exceeds `src` length
-        ("foo", "barbaz", 2, "foobar"),  # Limit smaller than `src`
+        ("foo", "barbaz", 2, "fooba"),  # Limit smaller than `src`
         ("abcdef", "ghi", 0, "abcdef"),  # Limit 0, `dest` should stay the same
     ]
     
